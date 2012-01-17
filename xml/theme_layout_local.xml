@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns="http://www.w3schools.com"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="localhost ../xsd/theme_layout_local.xsd">
+    <default>
+        <remove name="right.poll"></remove>
+        
+        <reference name="referencia">
+            <action method="index">
+                <applied></applied>
+            </action>
+        </reference>
+    </default>
+</layout>

@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://www.w3schools.com"
+xmlns="http://www.w3schools.com"
+elementFormDefault="qualified">
+    <xs:element name="layout">
+        <xs:annotation>
+            <xs:documentation>
+                This is the layout configuration root node
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="default">
+                    <xs:annotation>
+                        <xs:documentation>
+                            Default node for layout configuration
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="remove">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        Tag for removing layout reference
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:attribute name="name" type="xs:string">
+                                        <xs:annotation>
+                                            <xs:documentation>
+                                                Reference name to be removed
+                                            </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                            
+                            <xs:element name="reference" type="reference">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        Reference tag to be added
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>          
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:complexType name="reference">
+        <xs:attribute name="name">
+            <xs:annotation>
+                <xs:documentation>
+                        Reference name to be added
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+                                    
+        <xs:sequence>
+            <xs:element name="action">
+                <xs:annotation>
+                    <xs:documentation>
+                        Action name to be executed when the reference is called
+                    </xs:documentation>
+                </xs:annotation>
+                                            
+                <xs:complexType>
+                    <xs:attribute name="method" type="xs:string"></xs:attribute>
+                                                
+                    <xs:all>
+                        <xs:element name="stylesheet" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    Path for the stylesheet file
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                                                    
+                        <xs:element name="template" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    Template path for the action call
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                                                    
+                        <xs:element name="applied">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    Tag indicating whether the action is applied
+                                </xs:documentation>
+                            </xs:annotation>
+                            <xs:simpleType>
+                                <xs:restriction base="xs:integer">
+                                    <xs:pattern value="[0-1]"></xs:pattern>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
