@@ -2,9 +2,11 @@ This project contains a reference to configuration files used on Magento e-comme
 
 To use your XSD reference, define your <config> tag as
 
+<pre>
 <config xmlns="http://www.w3schools.com"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="localhost ../xsd/etc_config.xsd">
 </config>
+</pre>
 
-Where you may define the schemaLocation must be applied as "<i>host</i> <i>path/to/the/file.xsd</i>"
+Where you may define the schemaLocation must be applied as "_host_ _path/to/the/file.xsd_"
