@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.w3schools.com"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="localhost ../xsd/etc_config.xsd">
+    <modules>
+        <SchemaName_ModuleName>
+            <depends></depends>
+            <version></version>
+        </SchemaName_ModuleName>
+    </modules>
+</config>

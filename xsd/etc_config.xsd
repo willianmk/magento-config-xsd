@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://www.w3schools.com"
+xmlns="http://www.w3schools.com"
+elementFormDefault="qualified">
+    <xs:element name="config" maxOccurs="1">
+        <xs:annotation>
+            <xs:documentation>
+                
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="modules">
+                    <xs:annotation>
+                        <xs:documentation>
+                            You define your modules inside this tag.
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="SchemaName_ModuleName" type="module">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        You must replace "SchemaName" and "ModuleName" to the names you use on your project after you 
+                                        define your children tags.
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="global">
+                    
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:complexType name="module">
+        <xs:choice>
+            <xs:element name="version" type="xs:string" maxOccurs="1" />
+            <xs:element name="depends" type="xs:string" maxOccurs="1" />
+        </xs:choice>
+    </xs:complexType>
+</xs:schema>
