@@ -1,6 +1,6 @@
 This project contains a reference to configuration files used on Magento e-commece system.
 
-To use your XSD reference, define your <config> tag as
+To use your XSD reference, define your "config" tag as
 
 <pre>
 <config xmlns="http://www.w3schools.com"
