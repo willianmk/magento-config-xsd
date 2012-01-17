@@ -90,7 +90,7 @@ elementFormDefault="qualified">
                         <xs:element name="applied">
                             <xs:annotation>
                                 <xs:documentation>
-                                    Tag indicating whether the action is applied
+                                    Tag indicating whether the action is applied. This parameter accepts 0 false and 1 for true.
                                 </xs:documentation>
                             </xs:annotation>
                             <xs:simpleType>
