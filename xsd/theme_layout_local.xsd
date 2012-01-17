@@ -49,6 +49,7 @@ elementFormDefault="qualified">
                                     <xs:complexContent>
                                         <xs:extension base="reference">
                                             <xs:attribute name="type"></xs:attribute>
+                                            <xs:attribute name="as"></xs:attribute>
                                         </xs:extension>
                                     </xs:complexContent>
                                 </xs:complexType>
