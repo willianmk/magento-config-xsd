@@ -10,5 +10,13 @@ xsi:schemaLocation="localhost ../xsd/theme_layout_local.xsd">
                 <applied></applied>
             </action>
         </reference>
+        
+        <block name="name" type="type">
+            <action method="method">
+                <applied>1</applied>
+                <stylesheet>stylesheets</stylesheet>
+                <template></template>
+            </action>
+        </block>
     </default>
 </layout>

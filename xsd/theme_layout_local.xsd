@@ -43,6 +43,16 @@ elementFormDefault="qualified">
                                     </xs:documentation>
                                 </xs:annotation>
                             </xs:element>
+                            
+                            <xs:element name="block">
+                                <xs:complexType>
+                                    <xs:complexContent>
+                                        <xs:extension base="reference">
+                                            <xs:attribute name="type"></xs:attribute>
+                                        </xs:extension>
+                                    </xs:complexContent>
+                                </xs:complexType>
+                            </xs:element>
                         </xs:sequence>
                     </xs:complexType>          
                 </xs:element>
