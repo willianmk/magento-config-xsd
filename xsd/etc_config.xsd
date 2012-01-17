@@ -6,7 +6,7 @@ elementFormDefault="qualified">
     <xs:element name="config" maxOccurs="1">
         <xs:annotation>
             <xs:documentation>
-                
+                This is the root part of configuration DOM.
             </xs:documentation>
         </xs:annotation>
         <xs:complexType>
@@ -30,8 +30,33 @@ elementFormDefault="qualified">
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
-                <xs:element name="global">
-                    
+                <xs:element name="global" type="global">
+                    <xs:annotation>
+                        <xs:documentation>
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                
+                <xs:element name="adminhtml" type="adminhtml">
+                    <xs:annotation>
+                        <xs:documentation>
+                            Here you set your admin configuration.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                
+                <xs:element name="frontend" type="frontend">
+                    <xs:annotation>
+                        <xs:documentation>
+                            This is the area where you define your front-end blocks and layout configuration.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                
+                <xs:element name="default" type="default">
+                    <xs:annotation>
+                        <xs:documentation></xs:documentation>
+                    </xs:annotation>
                 </xs:element>
             </xs:sequence>
         </xs:complexType>
@@ -42,5 +67,38 @@ elementFormDefault="qualified">
             <xs:element name="version" type="xs:string" maxOccurs="1" />
             <xs:element name="depends" type="xs:string" maxOccurs="1" />
         </xs:choice>
+    </xs:complexType>
+    
+    <xs:complexType name="global">
+        <xs:choice>
+            <xs:element name="models" type="models"></xs:element>
+            <xs:element name="resources" type="resources"></xs:element>
+            <xs:element name="blocks" type="blocks"></xs:element>
+            <xs:element name="newproduct" type="newproduct"></xs:element>
+        </xs:choice>
+    </xs:complexType>
+    
+    <xs:complexType name="adminhtml">
+        <xs:choice>
+            <xs:element name="menu" type="xs:string"></xs:element>
+            <xs:element name="acl" type="xs:string"></xs:element>
+            <xs:element name="events" type="xs:string"></xs:element>
+            <xs:element name="translate" type="xs:string"></xs:element>
+        </xs:choice>
+    </xs:complexType>
+    
+    <xs:complexType name="frontend">
+        <xs:sequence>
+            <xs:element name="routers"></xs:element>
+            <xs:element name="events"></xs:element>
+            <xs:element name="translate"></xs:element>
+            <xs:element name="layout"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="default">
+        <xs:sequence>
+            <xs:element name="config_vars"></xs:element>
+        </xs:sequence>
     </xs:complexType>
 </xs:schema>

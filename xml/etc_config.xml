@@ -8,4 +8,29 @@ xsi:schemaLocation="localhost ../xsd/etc_config.xsd">
             <version></version>
         </SchemaName_ModuleName>
     </modules>
+    
+    <global>
+        <blocks></blocks>
+        <models></models>
+        <newproduct></newproduct>
+        <resources></resources>
+    </global>
+    
+    <adminhtml>
+        <acl></acl>
+        <events></events>
+        <menu></menu>
+        <translate></translate>
+    </adminhtml>
+    
+    <frontend>
+        <events></events>
+        <layout></layout>
+        <routers></routers>
+        <translate></translate>
+    </frontend>
+    
+    <default>
+        <config_vars></config_vars>
+    </default>
 </config>
