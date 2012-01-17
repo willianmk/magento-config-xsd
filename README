@@ -7,4 +7,4 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="localhost ../xsd/etc_config.xsd">
 </config>
 
-Where you may define the schemaLocation must be applied as "<em>host</em> <em>path/to/the/file.xsd</em>"
+Where you may define the schemaLocation must be applied as "<i>host</i> <i>path/to/the/file.xsd</i>"
