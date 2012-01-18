@@ -24,7 +24,18 @@ xsi:schemaLocation="localhost ../xsd/etc_config.xsd">
     </adminhtml>
     
     <frontend>
-        <events></events>
+        <events>
+            <event_name>
+                <observers>
+                    <observer_name>
+                        <type>model</type>
+                        <class>Class_Name</class>
+                        <method>methodName</method>
+                    </observer_name>
+                </observers>
+            </event_name>
+        </events>
+        
         <layout></layout>
         <routers></routers>
         <translate></translate>

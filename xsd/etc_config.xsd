@@ -50,7 +50,7 @@ elementFormDefault="qualified">
                         <xs:documentation>
                             This is the area where you define your front-end blocks and layout configuration.
                         </xs:documentation>
-                    </xs:annotation>
+                    </xs:annotation>         
                 </xs:element>
                 
                 <xs:element name="default" type="default">
@@ -90,15 +90,77 @@ elementFormDefault="qualified">
     <xs:complexType name="frontend">
         <xs:sequence>
             <xs:element name="routers"></xs:element>
-            <xs:element name="events"></xs:element>
+            <xs:element name="events" type="events"></xs:element>
             <xs:element name="translate"></xs:element>
             <xs:element name="layout"></xs:element>
         </xs:sequence>
     </xs:complexType>
     
-    <xs:complexType name="default">
+    <xs:complexType name="events">
         <xs:sequence>
-            <xs:element name="config_vars"></xs:element>
+            <xs:element name="event_name">
+                <xs:annotation>
+                    <xs:documentation>
+                        For conventions, this tag is named as class_method to facilitate the reference catalog.
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:choice>
+                        <xs:element name="observers" type="observers" minOccurs="0" maxOccurs="1" />
+                    </xs:choice>
+                </xs:complexType>
+            </xs:element>
         </xs:sequence>
     </xs:complexType>
-</xs:schema>
+    
+    <xs:complexType name="observers" maxOccur="1">
+        <xs:all>
+            <xs:element name="observer_name">
+                <xs:annotation>
+                    <xs:documentation>
+                        The observer name must be a class_method declared as an observable object.
+                    </xs:documentation>
+                </xs:annotation>
+                
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="type" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    This type must be "model". TODO: Complete the type list
+                                </xs:documentation>
+                            </xs:annotation>
+                            <xs:simpleType>
+                                <xs:restriction>
+                                    <xs:enumeration value="model" />
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        
+                        <xs:element name="class" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    Class name for triggered event observer.
+                                </xs:documentation>    
+                            </xs:annotation>
+                        </xs:element>
+                        
+                        <xs:element name="method" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    Method name of the class.
+                                </xs:documentation>
+                            </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:all>
+        </xs:complexType>
+    
+        <xs:complexType name="default">
+            <xs:sequence>
+                <xs:element name="config_vars"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:schema>
