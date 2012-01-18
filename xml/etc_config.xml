@@ -32,6 +32,12 @@ xsi:schemaLocation="localhost ../xsd/etc_config.xsd">
                         <method></method>
                         <type></type>
                     </catalog_block_product_list_collection>
+                    
+                    <catalog_category_tree_move_before>
+                        <class></class>
+                        <method></method>
+                        <type></type>
+                    </catalog_category_tree_move_before>
                 </observers>
             </event_name>
         </events>
