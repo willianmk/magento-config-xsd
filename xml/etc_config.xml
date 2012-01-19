@@ -26,11 +26,13 @@ xsi:schemaLocation="localhost ../xsd/etc_config.xsd">
     <frontend>
         <events>
             <checkout_cart_save_after>
-                <observer_name>
-                    <class></class>
-                    <method></method>
-                    <type></type>
-                </observer_name>
+                <observers>
+                    <observer_name>
+                        <class></class>
+                        <method></method>
+                        <type></type>
+                    </observer_name>
+                </observers>
             </checkout_cart_save_after>
         </events>
         
@@ -38,6 +40,18 @@ xsi:schemaLocation="localhost ../xsd/etc_config.xsd">
         <routers></routers>
         <translate></translate>
     </frontend>
+    
+    <events>
+        <default>
+            <observers>
+                <observer_name>
+                    <class></class>
+                    <method></method>
+                    <type></type>
+                </observer_name>
+            </observers>
+        </default>
+    </events>
     
     <default>
         <config_vars></config_vars>

@@ -59,6 +59,14 @@ elementFormDefault="qualified">
                         <xs:documentation></xs:documentation>
                     </xs:annotation>
                 </xs:element>
+                
+                <xs:element name="events" type="events">
+                    <xs:annotation>
+                        <xs:documentation>
+                            In this section you define the global events on the project.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -2190,12 +2198,18 @@ elementFormDefault="qualified">
     
     <xs:complexType name="observers" maxOccur="1">
         <xs:all>
-            <xs:element name="observer_name" type="observer">
-                <xs:annotation>
-                    <xs:documentation>
+            <xs:element name="observers">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="observer_name" type="observer">
+                            <xs:annotation>
+                                <xs:documentation>
                         Observer name. For convenience, we use class_methodname
-                    </xs:documentation>
-                </xs:annotation>
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:all>
+                </xs:complexType>
             </xs:element>
         </xs:all>
     </xs:complexType>
