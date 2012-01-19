@@ -14,6 +14,17 @@ xsi:schemaLocation="localhost ../xsd/etc_config.xsd">
         <models></models>
         <newproduct></newproduct>
         <resources></resources>
+        <events>
+            <checkout_cart_add_product_complete>
+                <observers>
+                    <observer_name>
+                        <class></class>
+                        <method></method>
+                        <type></type>
+                    </observer_name>
+                </observers>
+            </checkout_cart_add_product_complete>
+        </events>
     </global>
     
     <adminhtml>
