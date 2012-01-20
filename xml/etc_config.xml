@@ -52,18 +52,6 @@ xsi:schemaLocation="localhost ../xsd/etc_config.xsd">
         <translate></translate>
     </frontend>
     
-    <events>
-        <default>
-            <observers>
-                <observer_name>
-                    <class></class>
-                    <method></method>
-                    <type></type>
-                </observer_name>
-            </observers>
-        </default>
-    </events>
-    
     <default>
         <config_vars></config_vars>
     </default>
