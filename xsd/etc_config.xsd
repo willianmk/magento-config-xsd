@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-targetNamespace="http://www.w3schools.com"
-xmlns="http://www.w3schools.com"
-elementFormDefault="qualified">
+           targetNamespace="http://www.w3schools.com"
+           xmlns="http://www.w3schools.com"
+           elementFormDefault="qualified">
     <xs:element name="config" maxOccurs="1">
         <xs:annotation>
             <xs:documentation>
@@ -34,7 +34,7 @@ elementFormDefault="qualified">
                 <xs:element name="global" type="global">
                     <xs:annotation>
                         <xs:documentation>
-                                Global items configuration
+                            Global items configuration
                         </xs:documentation>
                     </xs:annotation>
                 </xs:element>
@@ -92,10 +92,30 @@ elementFormDefault="qualified">
     
     <xs:complexType name="frontend">
         <xs:sequence>
-            <xs:element name="routers"></xs:element>
+            <xs:element name="routers" type="routers"></xs:element>
             <xs:element name="events" type="events"></xs:element>
             <xs:element name="translate"></xs:element>
             <xs:element name="layout"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="routers">
+        <xs:sequence>
+            <xs:element name="Namespace_ModuleName">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="use"></xs:element>
+                        <xs:element name="args" type="args"></xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="args">
+        <xs:sequence>
+            <xs:element name="module"></xs:element>
+            <xs:element name="frontName"></xs:element>
         </xs:sequence>
     </xs:complexType>
     
@@ -104,2086 +124,2086 @@ elementFormDefault="qualified">
             <xs:element name="default" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                cron.php, line 44
+                        cron.php, line 44
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_controller_action_predispatch_start" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/Controller/Action.php, line 151
+                        app/code/core/Mage/Adminhtml/Controller/Action.php, line 151
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_block_html_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/Block/Customer/Edit/Tab/Carts.php, line 61
+                        app/code/core/Mage/Adminhtml/Block/Customer/Edit/Tab/Carts.php, line 61
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_widget_grid_filter_collection" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/Block/Report/Grid.php, line 186
+                        app/code/core/Mage/Adminhtml/Block/Report/Grid.php, line 186
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_cms_page_edit_tab_meta_prepare_form" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/Block/Cms/Page/Edit/Tab/Meta.php, line 76
+                        app/code/core/Mage/Adminhtml/Block/Cms/Page/Edit/Tab/Meta.php, line 76
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_cms_page_edit_tab_design_prepare_form" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/Block/Cms/Page/Edit/Tab/Design.php, line 125
+                        app/code/core/Mage/Adminhtml/Block/Cms/Page/Edit/Tab/Design.php, line 125
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_cms_page_edit_tab_main_prepare_form" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/Block/Cms/Page/Edit/Tab/Main.php, line 117
+                        app/code/core/Mage/Adminhtml/Block/Cms/Page/Edit/Tab/Main.php, line 117
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_cms_page_edit_tab_content_prepare_form" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/Block/Cms/Page/Edit/Tab/Content.php, line 98
+                        app/code/core/Mage/Adminhtml/Block/Cms/Page/Edit/Tab/Content.php, line 98
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_widget_container_html_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/Block/Widget/Container.php, line 307
+                        app/code/core/Mage/Adminhtml/Block/Widget/Container.php, line 307
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_block_html_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/Block/Template.php, line 80
+                        app/code/core/Mage/Adminhtml/Block/Template.php, line 80
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_customer_orders_add_action_renderer" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/Block/Sales/Reorder/Renderer/Action.php, line 55
+                        app/code/core/Mage/Adminhtml/Block/Sales/Reorder/Renderer/Action.php, line 55
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_catalog_category_tabs" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/Block/Catalog/Category/Tabs.php, line 154
+                        app/code/core/Mage/Adminhtml/Block/Catalog/Category/Tabs.php, line 154
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_catalog_category_tree_is_moveable" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/Block/Catalog/Category/Tree.php, line 284
+                        app/code/core/Mage/Adminhtml/Block/Catalog/Category/Tree.php, line 284
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_catalog_category_tree_can_add_root_category" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/Block/Catalog/Category/Tree.php, line 321
+                        app/code/core/Mage/Adminhtml/Block/Catalog/Category/Tree.php, line 321
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_catalog_category_tree_can_add_sub_category" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/Block/Catalog/Category/Tree.php, line 341
+                        app/code/core/Mage/Adminhtml/Block/Catalog/Category/Tree.php, line 341
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_catalog_product_edit_prepare_form" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/Block/Catalog/Product/Attribute/New/Product/Attributes.php, line 64
+                        app/code/core/Mage/Adminhtml/Block/Catalog/Product/Attribute/New/Product/Attributes.php, line 64
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_catalog_product_edit_element_types" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/Block/Catalog/Product/Attribute/New/Product/Attributes.php, line 80
+                        app/code/core/Mage/Adminhtml/Block/Catalog/Product/Attribute/New/Product/Attributes.php, line 80
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_catalog_product_attribute_set_main_html_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/Block/Catalog/Product/Attribute/Set/Main.php, line 406
+                        app/code/core/Mage/Adminhtml/Block/Catalog/Product/Attribute/Set/Main.php, line 406
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_catalog_product_attribute_set_toolbar_main_html_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/Block/Catalog/Product/Attribute/Set/Toolbar/Main.php, line 68
+                        app/code/core/Mage/Adminhtml/Block/Catalog/Product/Attribute/Set/Toolbar/Main.php, line 68
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_product_attribute_types" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/Block/Catalog/Product/Attribute/Edit/Tab/Main.php, line 71
+                        app/code/core/Mage/Adminhtml/Block/Catalog/Product/Attribute/Edit/Tab/Main.php, line 71
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_catalog_product_attribute_edit_prepare_form" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/Block/Catalog/Product/Attribute/Edit/Tab/Main.php, line 242
+                        app/code/core/Mage/Adminhtml/Block/Catalog/Product/Attribute/Edit/Tab/Main.php, line 242
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_catalog_product_form_prepare_excluded_field_list" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/Block/Catalog/Product/Edit/Action/Attribute/Tab/Attributes.php, line 48
+                        app/code/core/Mage/Adminhtml/Block/Catalog/Product/Edit/Action/Attribute/Tab/Attributes.php, line 48
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_catalog_product_edit_prepare_form" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/Block/Catalog/Product/Edit/Tab/Attributes.php, line 135
+                        app/code/core/Mage/Adminhtml/Block/Catalog/Product/Edit/Tab/Attributes.php, line 135
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_catalog_product_edit_element_types" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/Block/Catalog/Product/Edit/Tab/Attributes.php, line 153
+                        app/code/core/Mage/Adminhtml/Block/Catalog/Product/Edit/Tab/Attributes.php, line 153
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_product_edit_form_render_recurring" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/Block/Catalog/Product/Edit/Tab/Price/Recurring.php, line 42
+                        app/code/core/Mage/Adminhtml/Block/Catalog/Product/Edit/Tab/Price/Recurring.php, line 42
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_catalog_product_edit_tab_attributes_create_html_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/Block/Catalog/Product/Edit/Tab/Attributes/Create.php, line 85
+                        app/code/core/Mage/Adminhtml/Block/Catalog/Product/Edit/Tab/Attributes/Create.php, line 85
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_promo_catalog_edit_tab_main_prepare_form" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/Block/Promo/Catalog/Edit/Tab/Main.php, line 197
+                        app/code/core/Mage/Adminhtml/Block/Promo/Catalog/Edit/Tab/Main.php, line 197
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_block_salesrule_actions_prepareform" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/Block/Promo/Quote/Edit/Tab/Actions.php, line 162
+                        app/code/core/Mage/Adminhtml/Block/Promo/Quote/Edit/Tab/Actions.php, line 162
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_promo_quote_edit_tab_main_prepare_form" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/Block/Promo/Quote/Edit/Tab/Main.php, line 255
+                        app/code/core/Mage/Adminhtml/Block/Promo/Quote/Edit/Tab/Main.php, line 255
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="cms_page_prepare_save" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/controllers/Cms/PageController.php, line 139
+                        app/code/core/Mage/Adminhtml/controllers/Cms/PageController.php, line 139
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_cmspage_on_delete" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/controllers/Cms/PageController.php, line 199
+                        app/code/core/Mage/Adminhtml/controllers/Cms/PageController.php, line 199
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_cmspage_on_delete" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/controllers/Cms/PageController.php, line 204
+                        app/code/core/Mage/Adminhtml/controllers/Cms/PageController.php, line 204
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_cache_flush_all" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/controllers/CacheController.php, line 56
+                        app/code/core/Mage/Adminhtml/controllers/CacheController.php, line 56
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_cache_flush_system" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/controllers/CacheController.php, line 68
+                        app/code/core/Mage/Adminhtml/controllers/CacheController.php, line 68
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_cache_refresh_type" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/controllers/CacheController.php, line 128
+                        app/code/core/Mage/Adminhtml/controllers/CacheController.php, line 128
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="clean_media_cache_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/controllers/CacheController.php, line 145
+                        app/code/core/Mage/Adminhtml/controllers/CacheController.php, line 145
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="clean_catalog_images_cache_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/controllers/CacheController.php, line 169
+                        app/code/core/Mage/Adminhtml/controllers/CacheController.php, line 169
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="admin_permissions_role_prepare_save" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/controllers/Permissions/RoleController.php, line 189
+                        app/code/core/Mage/Adminhtml/controllers/Permissions/RoleController.php, line 189
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="on_view_report" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/controllers/ReportController.php, line 82
+                        app/code/core/Mage/Adminhtml/controllers/ReportController.php, line 82
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_sales_order_create_process_data" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/controllers/Sales/Order/CreateController.php, line 245
+                        app/code/core/Mage/Adminhtml/controllers/Sales/Order/CreateController.php, line 245
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_sales_order_creditmemo_register_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/controllers/Sales/Order/CreditmemoController.php, line 160
+                        app/code/core/Mage/Adminhtml/controllers/Sales/Order/CreditmemoController.php, line 160
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_category_prepare_save" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/controllers/Catalog/CategoryController.php, line 304
+                        app/code/core/Mage/Adminhtml/controllers/Catalog/CategoryController.php, line 304
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_controller_category_delete" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/controllers/Catalog/CategoryController.php, line 399
+                        app/code/core/Mage/Adminhtml/controllers/Catalog/CategoryController.php, line 399
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_product_to_website_change" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/controllers/Catalog/Product/Action/AttributeController.php, line 145
+                        app/code/core/Mage/Adminhtml/controllers/Catalog/Product/Action/AttributeController.php, line 145
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_product_new_action" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/controllers/Catalog/ProductController.php, line 192
+                        app/code/core/Mage/Adminhtml/controllers/Catalog/ProductController.php, line 192
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_product_edit_action" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/controllers/Catalog/ProductController.php, line 237
+                        app/code/core/Mage/Adminhtml/controllers/Catalog/ProductController.php, line 237
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_product_prepare_save" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/controllers/Catalog/ProductController.php, line 664
+                        app/code/core/Mage/Adminhtml/controllers/Catalog/ProductController.php, line 664
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_controller_product_delete" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/controllers/Catalog/ProductController.php, line 868
+                        app/code/core/Mage/Adminhtml/controllers/Catalog/ProductController.php, line 868
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_controller_catalogrule_prepare_save" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/controllers/Promo/CatalogController.php, line 114
+                        app/code/core/Mage/Adminhtml/controllers/Promo/CatalogController.php, line 114
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_controller_salesrule_prepare_save" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/controllers/Promo/QuoteController.php, line 114
+                        app/code/core/Mage/Adminhtml/controllers/Promo/QuoteController.php, line 114
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_customer_prepare_save" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/controllers/CustomerController.php, line 301
+                        app/code/core/Mage/Adminhtml/controllers/CustomerController.php, line 301
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_customer_save_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/controllers/CustomerController.php, line 332
+                        app/code/core/Mage/Adminhtml/controllers/CustomerController.php, line 332
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="add_synchronize_message" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/controllers/System/Config/System/StorageController.php, line 154
+                        app/code/core/Mage/Adminhtml/controllers/System/Config/System/StorageController.php, line 154
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="store_group_save" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/controllers/System/StoreController.php, line 200
+                        app/code/core/Mage/Adminhtml/controllers/System/StoreController.php, line 200
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="store_delete" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/controllers/System/StoreController.php, line 431
+                        app/code/core/Mage/Adminhtml/controllers/System/StoreController.php, line 431
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_convert_order_to_quote" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/Model/Sales/Order/Create.php, line 319
+                        app/code/core/Mage/Adminhtml/Model/Sales/Order/Create.php, line 319
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_convert_order_item_to_quote_item" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/Model/Sales/Order/Create.php, line 412
+                        app/code/core/Mage/Adminhtml/Model/Sales/Order/Create.php, line 412
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="checkout_submit_all_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Adminhtml/Model/Sales/Order/Create.php, line 1486
+                        app/code/core/Mage/Adminhtml/Model/Sales/Order/Create.php, line 1486
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="googlecheckout_block_link_html_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/GoogleCheckout/Block/Link.php, line 90
+                        app/code/core/Mage/GoogleCheckout/Block/Link.php, line 90
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="googlecheckout_checkout_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/GoogleCheckout/controllers/RedirectController.php, line 98
+                        app/code/core/Mage/GoogleCheckout/controllers/RedirectController.php, line 98
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="google_checkout_discount_item_price" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/GoogleCheckout/Model/Api/Xml/Checkout.php, line 165
+                        app/code/core/Mage/GoogleCheckout/Model/Api/Xml/Checkout.php, line 165
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="checkout_submit_all_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/GoogleCheckout/Model/Api/Xml/Callback.php, line 446
+                        app/code/core/Mage/GoogleCheckout/Model/Api/Xml/Callback.php, line 446
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="rss_wishlist_xml_callback" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Rss/Block/Wishlist.php, line 124
+                        app/code/core/Mage/Rss/Block/Wishlist.php, line 124
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="rss_order_new_collection_select" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Rss/Block/Order/New.php, line 77
+                        app/code/core/Mage/Rss/Block/Order/New.php, line 77
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="rss_catalog_review_collection_select" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Rss/Block/Catalog/Review.php, line 74
+                        app/code/core/Mage/Rss/Block/Catalog/Review.php, line 74
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="rss_catalog_tagged_item_xml_callback" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Rss/Block/Catalog/Tag.php, line 92
+                        app/code/core/Mage/Rss/Block/Catalog/Tag.php, line 92
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="rss_catalog_notify_stock_collection_select" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Rss/Block/Catalog/NotifyStock.php, line 85
+                        app/code/core/Mage/Rss/Block/Catalog/NotifyStock.php, line 85
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="rss_catalog_category_xml_callback" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Rss/Block/Catalog/Category.php, line 119
+                        app/code/core/Mage/Rss/Block/Catalog/Category.php, line 119
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="rss_catalog_new_xml_callback" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Rss/Block/Catalog/New.php, line 122
+                        app/code/core/Mage/Rss/Block/Catalog/New.php, line 122
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="rss_catalog_special_xml_callback" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Rss/Block/Catalog/Special.php, line 165
+                        app/code/core/Mage/Rss/Block/Catalog/Special.php, line 165
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="customer_register_success" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Customer/controllers/AccountController.php, line 322
+                        app/code/core/Mage/Customer/controllers/AccountController.php, line 322
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="customer_registration_is_allowed" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Customer/Helper/Data.php, line 275
+                        app/code/core/Mage/Customer/Helper/Data.php, line 275
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="customer_address_format" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Customer/Model/Address/Abstract.php, line 305
+                        app/code/core/Mage/Customer/Model/Address/Abstract.php, line 305
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="customer_session_init" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Customer/Model/Session.php, line 75
+                        app/code/core/Mage/Customer/Model/Session.php, line 75
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="customer_login" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Customer/Model/Session.php, line 224
+                        app/code/core/Mage/Customer/Model/Session.php, line 224
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="customer_logout" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Customer/Model/Session.php, line 252
+                        app/code/core/Mage/Customer/Model/Session.php, line 252
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="customer_customer_authenticated" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Customer/Model/Customer.php, line 124
+                        app/code/core/Mage/Customer/Model/Customer.php, line 124
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="paypal_prepare_line_items" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Paypal/Model/Cart.php, line 318
+                        app/code/core/Mage/Paypal/Model/Cart.php, line 318
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="tax_settings_change_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Tax/Model/Calculation/Rate.php, line 111
+                        app/code/core/Mage/Tax/Model/Calculation/Rate.php, line 111
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="tax_settings_change_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Tax/Model/Calculation/Rate.php, line 137
+                        app/code/core/Mage/Tax/Model/Calculation/Rate.php, line 137
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="tax_settings_change_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Tax/Model/Calculation/Rate.php, line 181
+                        app/code/core/Mage/Tax/Model/Calculation/Rate.php, line 181
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="tax_settings_change_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Tax/Model/Calculation/Rule.php, line 73
+                        app/code/core/Mage/Tax/Model/Calculation/Rule.php, line 73
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="tax_settings_change_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Tax/Model/Calculation/Rule.php, line 85
+                        app/code/core/Mage/Tax/Model/Calculation/Rule.php, line 85
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="tax_rate_data_fetch" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Tax/Model/Calculation.php, line 191
+                        app/code/core/Mage/Tax/Model/Calculation.php, line 191
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="wishlist_add_product" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Wishlist/controllers/IndexController.php, line 173
+                        app/code/core/Mage/Wishlist/controllers/IndexController.php, line 173
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="wishlist_update_item" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Wishlist/controllers/IndexController.php, line 287
+                        app/code/core/Mage/Wishlist/controllers/IndexController.php, line 287
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="wishlist_share" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Wishlist/controllers/IndexController.php, line 578
+                        app/code/core/Mage/Wishlist/controllers/IndexController.php, line 578
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="wishlist_items_renewed" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Wishlist/Helper/Data.php, line 476
+                        app/code/core/Mage/Wishlist/Helper/Data.php, line 476
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="wishlist_item_collection_products_after_load" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Wishlist/Model/Resource/Item/Collection.php, line 187
+                        app/code/core/Mage/Wishlist/Model/Resource/Item/Collection.php, line 187
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="wishlist_add_item" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Wishlist/Model/Wishlist.php, line 251
+                        app/code/core/Mage/Wishlist/Model/Wishlist.php, line 251
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="wishlist_product_add_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Wishlist/Model/Wishlist.php, line 336
+                        app/code/core/Mage/Wishlist/Model/Wishlist.php, line 336
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="admin_user_authenticate_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Admin/Model/User.php, line 271
+                        app/code/core/Mage/Admin/Model/User.php, line 271
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="admin_session_user_login_success" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Admin/Model/Session.php, line 102
+                        app/code/core/Mage/Admin/Model/Session.php, line 102
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="admin_session_user_login_failed" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Admin/Model/Session.php, line 112
+                        app/code/core/Mage/Admin/Model/Session.php, line 112
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="cms_controller_router_match_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Cms/Controller/Router.php, line 71
+                        app/code/core/Mage/Cms/Controller/Router.php, line 71
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="cms_wysiwyg_images_static_urls_allowed" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Cms/Helper/Wysiwyg/Images.php, line 158
+                        app/code/core/Mage/Cms/Helper/Wysiwyg/Images.php, line 158
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="cms_page_render" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Cms/Helper/Page.php, line 106
+                        app/code/core/Mage/Cms/Helper/Page.php, line 106
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="cms_wysiwyg_config_prepare" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Cms/Model/Wysiwyg/Config.php, line 97
+                        app/code/core/Mage/Cms/Model/Wysiwyg/Config.php, line 97
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="cms_page_get_available_statuses" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Cms/Model/Page.php, line 152
+                        app/code/core/Mage/Cms/Model/Page.php, line 152
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="persistent_session_expired" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Persistent/controllers/IndexController.php, line 84
+                        app/code/core/Mage/Persistent/controllers/IndexController.php, line 84
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="persistent_session_expired" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Persistent/Model/Observer.php, line 483
+                        app/code/core/Mage/Persistent/Model/Observer.php, line 483
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="controller_action_layout_load_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Core/Controller/Varien/Action.php, line 300
+                        app/code/core/Mage/Core/Controller/Varien/Action.php, line 300
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="controller_action_layout_generate_xml_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Core/Controller/Varien/Action.php, line 318
+                        app/code/core/Mage/Core/Controller/Varien/Action.php, line 318
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="controller_action_layout_generate_blocks_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Core/Controller/Varien/Action.php, line 337
+                        app/code/core/Mage/Core/Controller/Varien/Action.php, line 337
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="controller_action_layout_generate_blocks_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Core/Controller/Varien/Action.php, line 349
+                        app/code/core/Mage/Core/Controller/Varien/Action.php, line 349
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="controller_action_layout_render_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Core/Controller/Varien/Action.php, line 385
+                        app/code/core/Mage/Core/Controller/Varien/Action.php, line 385
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="controller_action_predispatch" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Core/Controller/Varien/Action.php, line 505
+                        app/code/core/Mage/Core/Controller/Varien/Action.php, line 505
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="controller_action_postdispatch" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Core/Controller/Varien/Action.php, line 534
+                        app/code/core/Mage/Core/Controller/Varien/Action.php, line 534
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="controller_action_noroute" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Core/Controller/Varien/Action.php, line 543
+                        app/code/core/Mage/Core/Controller/Varien/Action.php, line 543
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="controller_action_nocookies" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Core/Controller/Varien/Action.php, line 563
+                        app/code/core/Mage/Core/Controller/Varien/Action.php, line 563
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="controller_front_init_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Core/Controller/Varien/Front.php, line 128
+                        app/code/core/Mage/Core/Controller/Varien/Front.php, line 128
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="controller_front_init_routers" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Core/Controller/Varien/Front.php, line 147
+                        app/code/core/Mage/Core/Controller/Varien/Front.php, line 147
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="controller_front_send_response_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Core/Controller/Varien/Front.php, line 186
+                        app/code/core/Mage/Core/Controller/Varien/Front.php, line 186
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="controller_front_send_response_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Core/Controller/Varien/Front.php, line 190
+                        app/code/core/Mage/Core/Controller/Varien/Front.php, line 190
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="http_response_send_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Core/Controller/Response/Http.php, line 74
+                        app/code/core/Mage/Core/Controller/Response/Http.php, line 74
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="core_block_abstract_prepare_layout_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Core/Block/Abstract.php, line 237
+                        app/code/core/Mage/Core/Block/Abstract.php, line 237
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="core_block_abstract_to_html_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Core/Block/Abstract.php, line 850
+                        app/code/core/Mage/Core/Block/Abstract.php, line 850
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="core_block_abstract_to_html_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Core/Block/Abstract.php, line 886
+                        app/code/core/Mage/Core/Block/Abstract.php, line 886
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="core_layout_block_create_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Core/Model/Layout.php, line 433
+                        app/code/core/Mage/Core/Model/Layout.php, line 433
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="core_collection_abstract_load_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Core/Model/Resource/Db/Collection/Abstract.php, line 585
+                        app/code/core/Mage/Core/Model/Resource/Db/Collection/Abstract.php, line 585
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="core_collection_abstract_load_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Core/Model/Resource/Db/Collection/Abstract.php, line 634
+                        app/code/core/Mage/Core/Model/Resource/Db/Collection/Abstract.php, line 634
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="core_session_abstract_clear_messages" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Core/Model/Session/Abstract.php, line 216
+                        app/code/core/Mage/Core/Model/Session/Abstract.php, line 216
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="core_session_abstract_add_message" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Core/Model/Session/Abstract.php, line 252
+                        app/code/core/Mage/Core/Model/Session/Abstract.php, line 252
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="application_clean_cache" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Core/Model/App.php, line 1160
+                        app/code/core/Mage/Core/Model/App.php, line 1160
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="core_layout_update_updates_get_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Core/Model/Layout/Update.php, line 406
+                        app/code/core/Mage/Core/Model/Layout/Update.php, line 406
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="model_load_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Core/Model/Abstract.php, line 253
+                        app/code/core/Mage/Core/Model/Abstract.php, line 253
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="model_load_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Core/Model/Abstract.php, line 266
+                        app/code/core/Mage/Core/Model/Abstract.php, line 266
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="model_save_commit_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Core/Model/Abstract.php, line 343
+                        app/code/core/Mage/Core/Model/Abstract.php, line 343
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="model_save_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Core/Model/Abstract.php, line 390
+                        app/code/core/Mage/Core/Model/Abstract.php, line 390
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="model_save_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Core/Model/Abstract.php, line 465
+                        app/code/core/Mage/Core/Model/Abstract.php, line 465
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="model_delete_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Core/Model/Abstract.php, line 500
+                        app/code/core/Mage/Core/Model/Abstract.php, line 500
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="model_delete_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Core/Model/Abstract.php, line 528
+                        app/code/core/Mage/Core/Model/Abstract.php, line 528
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="model_delete_commit_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Core/Model/Abstract.php, line 540
+                        app/code/core/Mage/Core/Model/Abstract.php, line 540
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="core_locale_set_locale" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Core/Model/Locale.php, line 139
+                        app/code/core/Mage/Core/Model/Locale.php, line 139
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="resource_get_tablename" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Core/Model/Resource.php, line 278
+                        app/code/core/Mage/Core/Model/Resource.php, line 278
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="api_user_authenticated" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Api/Model/User.php, line 204
+                        app/code/core/Mage/Api/Model/User.php, line 204
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="poll_vote_add" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Poll/controllers/VoteController.php, line 67
+                        app/code/core/Mage/Poll/controllers/VoteController.php, line 67
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="checkout_cart_add_product_complete" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/XmlConnect/controllers/CartController.php, line 222
+                        app/code/core/Mage/XmlConnect/controllers/CartController.php, line 222
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="review_controller_product_init_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/XmlConnect/controllers/ReviewController.php, line 41
+                        app/code/core/Mage/XmlConnect/controllers/ReviewController.php, line 41
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="review_controller_product_init" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/XmlConnect/controllers/ReviewController.php, line 46
+                        app/code/core/Mage/XmlConnect/controllers/ReviewController.php, line 46
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="review_controller_product_init_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/XmlConnect/controllers/ReviewController.php, line 50
+                        app/code/core/Mage/XmlConnect/controllers/ReviewController.php, line 50
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="wishlist_add_product" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/XmlConnect/controllers/WishlistController.php, line 128
+                        app/code/core/Mage/XmlConnect/controllers/WishlistController.php, line 128
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="checkout_controller_onepage_save_shipping_method" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/XmlConnect/controllers/CheckoutController.php, line 299
+                        app/code/core/Mage/XmlConnect/controllers/CheckoutController.php, line 299
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="before_save_message_queue" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/XmlConnect/Model/Queue.php, line 297
+                        app/code/core/Mage/XmlConnect/Model/Queue.php, line 297
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalogindex_prepare_price_select" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/CatalogIndex/Model/Resource/Price.php, line 138
+                        app/code/core/Mage/CatalogIndex/Model/Resource/Price.php, line 138
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalogindex_prepare_price_select" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/CatalogIndex/Model/Resource/Price.php, line 177
+                        app/code/core/Mage/CatalogIndex/Model/Resource/Price.php, line 177
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalogindex_prepare_price_select" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/CatalogIndex/Model/Resource/Price.php, line 231
+                        app/code/core/Mage/CatalogIndex/Model/Resource/Price.php, line 231
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalogindex_prepare_price_select" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/CatalogIndex/Model/Resource/Price.php, line 281
+                        app/code/core/Mage/CatalogIndex/Model/Resource/Price.php, line 281
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalogindex_plain_reindex_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/CatalogIndex/Model/Indexer.php, line 372
+                        app/code/core/Mage/CatalogIndex/Model/Indexer.php, line 372
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalogindex_prepare_price_select" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/CatalogIndex/Model/Indexer.php, line 632
+                        app/code/core/Mage/CatalogIndex/Model/Indexer.php, line 632
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalogindex_get_minimal_price" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/CatalogIndex/Model/Data/Abstract.php, line 204
+                        app/code/core/Mage/CatalogIndex/Model/Data/Abstract.php, line 204
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="review_controller_product_init_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Review/controllers/ProductController.php, line 73
+                        app/code/core/Mage/Review/controllers/ProductController.php, line 73
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="review_controller_product_init" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Review/controllers/ProductController.php, line 85
+                        app/code/core/Mage/Review/controllers/ProductController.php, line 85
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="review_review_collection_load_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Review/Model/Resource/Review/Collection.php, line 269
+                        app/code/core/Mage/Review/Model/Resource/Review/Collection.php, line 269
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="gift_options_prepare_items" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/GiftMessage/Block/Message/Inline.php, line 177
+                        app/code/core/Mage/GiftMessage/Block/Message/Inline.php, line 177
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="magento/app/code/core/Mage/GiftMessage/Model/Api.php" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/GiftMessage/Model/Api.php, line 64
+                        app/code/core/Mage/GiftMessage/Model/Api.php, line 64
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="checkout_controller_onepage_save_shipping_method" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/GiftMessage/Model/Api.php, line 67
+                        app/code/core/Mage/GiftMessage/Model/Api.php, line 67
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="magento/app/code/core/Mage/GiftMessage/Model/Api/V2.php" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/GiftMessage/Model/Api/V2.php, line 91
+                        app/code/core/Mage/GiftMessage/Model/Api/V2.php, line 91
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="checkout_controller_onepage_save_shipping_method" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/GiftMessage/Model/Api/V2.php, line 94
+                        app/code/core/Mage/GiftMessage/Model/Api/V2.php, line 94
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="payment_form_block_to_html_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Payment/Block/Form/Cc.php, line 154
+                        app/code/core/Mage/Payment/Block/Form/Cc.php, line 154
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="payment_info_block_prepare_specific_information" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Payment/Block/Info.php, line 166
+                        app/code/core/Mage/Payment/Block/Info.php, line 166
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="payment_method_is_active" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Payment/Model/Method/Abstract.php, line 629
+                        app/code/core/Mage/Payment/Model/Method/Abstract.php, line 629
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalogrule_before_apply" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/CatalogRule/Model/Resource/Rule.php, line 345
+                        app/code/core/Mage/CatalogRule/Model/Resource/Rule.php, line 345
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalogrule_after_apply" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/CatalogRule/Model/Resource/Rule.php, line 481
+                        app/code/core/Mage/CatalogRule/Model/Resource/Rule.php, line 481
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="salesrule_validator_process" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/SalesRule/Model/Validator.php, line 424
+                        app/code/core/Mage/SalesRule/Model/Validator.php, line 424
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="salesrule_rule_get_coupon_types" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/SalesRule/Model/Rule.php, line 384
+                        app/code/core/Mage/SalesRule/Model/Rule.php, line 384
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="salesrule_rule_condition_combine" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/SalesRule/Model/Rule/Condition/Combine.php, line 54
+                        app/code/core/Mage/SalesRule/Model/Rule/Condition/Combine.php, line 54
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_quote_address_discount_item" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/SalesRule/Model/Quote/Discount.php, line 86
+                        app/code/core/Mage/SalesRule/Model/Quote/Discount.php, line 86
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_quote_address_discount_item" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/SalesRule/Model/Quote/Discount.php, line 92
+                        app/code/core/Mage/SalesRule/Model/Quote/Discount.php, line 92
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="prepare_catalog_product_collection_prices" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Resource/Quote/Item/Collection.php, line 187
+                        app/code/core/Mage/Sales/Model/Resource/Quote/Item/Collection.php, line 187
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_quote_item_collection_products_after_load" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Resource/Quote/Item/Collection.php, line 191
+                        app/code/core/Mage/Sales/Model/Resource/Quote/Item/Collection.php, line 191
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_sale_collection_query_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Resource/Sale/Collection.php, line 154
+                        app/code/core/Mage/Sales/Model/Resource/Sale/Collection.php, line 154
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_convert_quote_to_order" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Convert/Quote.php, line 56
+                        app/code/core/Mage/Sales/Model/Convert/Quote.php, line 56
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_convert_quote_address_to_order" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Convert/Quote.php, line 74
+                        app/code/core/Mage/Sales/Model/Convert/Quote.php, line 74
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_convert_quote_address_to_order_address" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Convert/Quote.php, line 94
+                        app/code/core/Mage/Sales/Model/Convert/Quote.php, line 94
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_convert_quote_payment_to_order_payment" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Convert/Quote.php, line 113
+                        app/code/core/Mage/Sales/Model/Convert/Quote.php, line 113
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_convert_quote_item_to_order_item" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Convert/Quote.php, line 152
+                        app/code/core/Mage/Sales/Model/Convert/Quote.php, line 152
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_convert_order_to_quote" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Convert/Order.php, line 53
+                        app/code/core/Mage/Sales/Model/Convert/Order.php, line 53
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_quote_remove_item" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Quote.php, line 813
+                        app/code/core/Mage/Sales/Model/Quote.php, line 813
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_quote_add_item" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Quote.php, line 844
+                        app/code/core/Mage/Sales/Model/Quote.php, line 844
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_quote_product_add_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Quote.php, line 924
+                        app/code/core/Mage/Sales/Model/Quote.php, line 924
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="checkout_type_onepage_save_order" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Service/Quote.php, line 186
+                        app/code/core/Mage/Sales/Model/Service/Quote.php, line 186
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_model_service_quote_submit_success" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Service/Quote.php, line 191
+                        app/code/core/Mage/Sales/Model/Service/Quote.php, line 191
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_model_service_quote_submit_failure" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Service/Quote.php, line 207
+                        app/code/core/Mage/Sales/Model/Service/Quote.php, line 207
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_model_service_quote_submit_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Service/Quote.php, line 210
+                        app/code/core/Mage/Sales/Model/Service/Quote.php, line 210
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_order_place_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Order.php, line 1072
+                        app/code/core/Mage/Sales/Model/Order.php, line 1072
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="order_cancel_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Order.php, line 1117
+                        app/code/core/Mage/Sales/Model/Order.php, line 1117
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_order_payment_place_start" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Order/Payment.php, line 277
+                        app/code/core/Mage/Sales/Model/Order/Payment.php, line 277
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_order_payment_place_end" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Order/Payment.php, line 356
+                        app/code/core/Mage/Sales/Model/Order/Payment.php, line 356
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_order_payment_capture" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Order/Payment.php, line 394
+                        app/code/core/Mage/Sales/Model/Order/Payment.php, line 394
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_order_payment_pay" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Order/Payment.php, line 535
+                        app/code/core/Mage/Sales/Model/Order/Payment.php, line 535
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_order_payment_cancel_invoice" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Order/Payment.php, line 553
+                        app/code/core/Mage/Sales/Model/Order/Payment.php, line 553
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_order_payment_void" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Order/Payment.php, line 603
+                        app/code/core/Mage/Sales/Model/Order/Payment.php, line 603
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_order_payment_refund" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Order/Payment.php, line 691
+                        app/code/core/Mage/Sales/Model/Order/Payment.php, line 691
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_order_payment_cancel_creditmemo" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Order/Payment.php, line 797
+                        app/code/core/Mage/Sales/Model/Order/Payment.php, line 797
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_order_payment_cancel" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Order/Payment.php, line 825
+                        app/code/core/Mage/Sales/Model/Order/Payment.php, line 825
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_order_invoice_pay" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Order/Invoice.php, line 411
+                        app/code/core/Mage/Sales/Model/Order/Invoice.php, line 411
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_order_invoice_cancel" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Order/Invoice.php, line 481
+                        app/code/core/Mage/Sales/Model/Order/Invoice.php, line 481
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_order_invoice_register" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Order/Invoice.php, line 658
+                        app/code/core/Mage/Sales/Model/Order/Invoice.php, line 658
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_order_item_cancel" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Order/Item.php, line 506
+                        app/code/core/Mage/Sales/Model/Order/Item.php, line 506
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_order_creditmemo_refund" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Order/Creditmemo.php, line 421
+                        app/code/core/Mage/Sales/Model/Order/Creditmemo.php, line 421
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_order_creditmemo_cancel" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Order/Creditmemo.php, line 468
+                        app/code/core/Mage/Sales/Model/Order/Creditmemo.php, line 468
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_quote_item_qty_set_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Quote/Item.php, line 300
+                        app/code/core/Mage/Sales/Model/Quote/Item.php, line 300
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_quote_item_set_product" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Quote/Item.php, line 402
+                        app/code/core/Mage/Sales/Model/Quote/Item.php, line 402
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_quote_address_discount_item" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Quote/Address/Total/Discount.php, line 80
+                        app/code/core/Mage/Sales/Model/Quote/Address/Total/Discount.php, line 80
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_quote_address_discount_item" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Quote/Address/Total/Discount.php, line 111
+                        app/code/core/Mage/Sales/Model/Quote/Address/Total/Discount.php, line 111
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sales_quote_config_get_product_attributes" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Quote/Config.php, line 36
+                        app/code/core/Mage/Sales/Model/Quote/Config.php, line 36
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="clear_expired_quotes_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sales/Model/Observer.php, line 52
+                        app/code/core/Mage/Sales/Model/Observer.php, line 52
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="checkout_controller_multishipping_shipping_post" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Checkout/controllers/MultishippingController.php, line 344
+                        app/code/core/Mage/Checkout/controllers/MultishippingController.php, line 344
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="checkout_multishipping_controller_success_action" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Checkout/controllers/MultishippingController.php, line 545
+                        app/code/core/Mage/Checkout/controllers/MultishippingController.php, line 545
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="checkout_cart_add_product_complete" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Checkout/controllers/CartController.php, line 195
+                        app/code/core/Mage/Checkout/controllers/CartController.php, line 195
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="checkout_cart_update_item_complete" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Checkout/controllers/CartController.php, line 336
+                        app/code/core/Mage/Checkout/controllers/CartController.php, line 336
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="checkout_onepage_controller_success_action" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Checkout/controllers/OnepageController.php, line 230
+                        app/code/core/Mage/Checkout/controllers/OnepageController.php, line 230
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="checkout_controller_onepage_save_shipping_method" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Checkout/controllers/OnepageController.php, line 374
+                        app/code/core/Mage/Checkout/controllers/OnepageController.php, line 374
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="checkout_allow_guest" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Checkout/Helper/Data.php, line 276
+                        app/code/core/Mage/Checkout/Helper/Data.php, line 276
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="checkout_cart_product_add_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Checkout/Model/Cart.php, line 264
+                        app/code/core/Mage/Checkout/Model/Cart.php, line 264
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="checkout_cart_update_items_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Checkout/Model/Cart.php, line 364
+                        app/code/core/Mage/Checkout/Model/Cart.php, line 364
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="checkout_cart_update_items_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Checkout/Model/Cart.php, line 402
+                        app/code/core/Mage/Checkout/Model/Cart.php, line 402
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="checkout_cart_save_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Checkout/Model/Cart.php, line 425
+                        app/code/core/Mage/Checkout/Model/Cart.php, line 425
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="checkout_cart_save_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Checkout/Model/Cart.php, line 435
+                        app/code/core/Mage/Checkout/Model/Cart.php, line 435
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="checkout_cart_product_update_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Checkout/Model/Cart.php, line 558
+                        app/code/core/Mage/Checkout/Model/Cart.php, line 558
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="custom_quote_process" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Checkout/Model/Session.php, line 105
+                        app/code/core/Mage/Checkout/Model/Session.php, line 105
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="checkout_quote_init" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Checkout/Model/Session.php, line 148
+                        app/code/core/Mage/Checkout/Model/Session.php, line 148
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="load_customer_quote_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Checkout/Model/Session.php, line 197
+                        app/code/core/Mage/Checkout/Model/Session.php, line 197
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="checkout_quote_destroy" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Checkout/Model/Session.php, line 358
+                        app/code/core/Mage/Checkout/Model/Session.php, line 358
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="checkout_type_onepage_save_order_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Checkout/Model/Cart/Api.php, line 174
+                        app/code/core/Mage/Checkout/Model/Cart/Api.php, line 174
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="checkout_submit_all_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Checkout/Model/Cart/Api.php, line 184
+                        app/code/core/Mage/Checkout/Model/Cart/Api.php, line 184
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="checkout_type_onepage_save_order_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Checkout/Model/Type/Onepage.php, line 780
+                        app/code/core/Mage/Checkout/Model/Type/Onepage.php, line 780
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="checkout_submit_all_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Checkout/Model/Type/Onepage.php, line 822
+                        app/code/core/Mage/Checkout/Model/Type/Onepage.php, line 822
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="checkout_type_multishipping_set_shipping_items" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Checkout/Model/Type/Multishipping.php, line 275
+                        app/code/core/Mage/Checkout/Model/Type/Multishipping.php, line 275
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="checkout_type_multishipping_create_orders_single" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Checkout/Model/Type/Multishipping.php, line 506
+                        app/code/core/Mage/Checkout/Model/Type/Multishipping.php, line 506
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="checkout_submit_all_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Checkout/Model/Type/Multishipping.php, line 528
+                        app/code/core/Mage/Checkout/Model/Type/Multishipping.php, line 528
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="checkout_multishipping_refund_all" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Checkout/Model/Type/Multishipping.php, line 532
+                        app/code/core/Mage/Checkout/Model/Type/Multishipping.php, line 532
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="sendfriend_product" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Sendfriend/controllers/ProductController.php, line 131
+                        app/code/core/Mage/Sendfriend/controllers/ProductController.php, line 131
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_product_view_config" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Block/Product/View.php, line 181
+                        app/code/core/Mage/Catalog/Block/Product/View.php, line 181
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_block_product_list_collection" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Block/Product/List.php, line 161
+                        app/code/core/Mage/Catalog/Block/Product/List.php, line 161
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_product_upsell" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Block/Product/List/Upsell.php, line 79
+                        app/code/core/Mage/Catalog/Block/Product/List/Upsell.php, line 79
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_product_type_configurable_price" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Block/Product/View/Type/Configurable.php, line 157
+                        app/code/core/Mage/Catalog/Block/Product/View/Type/Configurable.php, line 157
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_controller_category_init_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/controllers/CategoryController.php, line 43
+                        app/code/core/Mage/Catalog/controllers/CategoryController.php, line 43
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_controller_category_init_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/controllers/CategoryController.php, line 59
+                        app/code/core/Mage/Catalog/controllers/CategoryController.php, line 59
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_product_compare_add_product" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/controllers/Product/CompareController.php, line 87
+                        app/code/core/Mage/Catalog/controllers/Product/CompareController.php, line 87
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_product_compare_remove_product" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/controllers/Product/CompareController.php, line 126
+                        app/code/core/Mage/Catalog/controllers/Product/CompareController.php, line 126
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_helper_output_construct" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Helper/Output.php, line 48
+                        app/code/core/Mage/Catalog/Helper/Output.php, line 48
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_controller_product_view" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Helper/Product/View.php, line 135
+                        app/code/core/Mage/Catalog/Helper/Product/View.php, line 135
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_controller_product_init_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Helper/Product.php, line 283
+                        app/code/core/Mage/Catalog/Helper/Product.php, line 283
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_controller_product_init" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Helper/Product.php, line 320
+                        app/code/core/Mage/Catalog/Helper/Product.php, line 320
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalogindex_prepare_price_select" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Model/Resource/Layer/Filter/Price.php, line 103
+                        app/code/core/Mage/Catalog/Model/Resource/Layer/Filter/Price.php, line 103
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_prepare_price_select" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Model/Resource/Layer/Filter/Price.php, line 108
+                        app/code/core/Mage/Catalog/Model/Resource/Layer/Filter/Price.php, line 108
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_category_tree_init_inactive_category_ids" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Model/Resource/Category/Tree.php, line 210
+                        app/code/core/Mage/Catalog/Model/Resource/Category/Tree.php, line 210
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_category_tree_move_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Model/Resource/Category/Tree.php, line 406
+                        app/code/core/Mage/Catalog/Model/Resource/Category/Tree.php, line 406
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_category_tree_move_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Model/Resource/Category/Tree.php, line 443
+                        app/code/core/Mage/Catalog/Model/Resource/Category/Tree.php, line 443
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_category_tree_init_inactive_category_ids" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Model/Resource/Category/Flat.php, line 198
+                        app/code/core/Mage/Catalog/Model/Resource/Category/Flat.php, line 198
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_category_change_products" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Model/Resource/Category.php, line 364
+                        app/code/core/Mage/Catalog/Model/Resource/Category.php, line 364
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_product_flat_prepare_columns" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Model/Resource/Product/Flat/Indexer.php, line 430
+                        app/code/core/Mage/Catalog/Model/Resource/Product/Flat/Indexer.php, line 430
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_product_flat_prepare_indexes" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Model/Resource/Product/Flat/Indexer.php, line 490
+                        app/code/core/Mage/Catalog/Model/Resource/Product/Flat/Indexer.php, line 490
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_product_flat_rebuild" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Model/Resource/Product/Flat/Indexer.php, line 1026
+                        app/code/core/Mage/Catalog/Model/Resource/Product/Flat/Indexer.php, line 1026
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_product_flat_update_product" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Model/Resource/Product/Flat/Indexer.php, line 1269
+                        app/code/core/Mage/Catalog/Model/Resource/Product/Flat/Indexer.php, line 1269
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_product_prepare_index_select" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Model/Resource/Product/Indexer/Price/Grouped.php, line 116
+                        app/code/core/Mage/Catalog/Model/Resource/Product/Indexer/Price/Grouped.php, line 116
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="prepare_catalog_product_index_select" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Model/Resource/Product/Indexer/Price/Default.php, line 263
+                        app/code/core/Mage/Catalog/Model/Resource/Product/Indexer/Price/Default.php, line 263
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="prepare_catalog_product_price_index_table" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Model/Resource/Product/Indexer/Price/Default.php, line 280
+                        app/code/core/Mage/Catalog/Model/Resource/Product/Indexer/Price/Default.php, line 280
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="prepare_catalog_product_index_select" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Model/Resource/Product/Indexer/Eav/Decimal.php, line 98
+                        app/code/core/Mage/Catalog/Model/Resource/Product/Indexer/Eav/Decimal.php, line 98
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="prepare_catalog_product_index_select" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Model/Resource/Product/Indexer/Eav/Source.php, line 154
+                        app/code/core/Mage/Catalog/Model/Resource/Product/Indexer/Eav/Source.php, line 154
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="prepare_catalog_product_index_select" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Model/Resource/Product/Indexer/Eav/Source.php, line 228
+                        app/code/core/Mage/Catalog/Model/Resource/Product/Indexer/Eav/Source.php, line 228
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="prepare_catalog_product_index_select" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Model/Resource/Product/Indexer/Eav/Abstract.php, line 195
+                        app/code/core/Mage/Catalog/Model/Resource/Product/Indexer/Eav/Abstract.php, line 195
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_product_compare_item_collection_clear" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Model/Resource/Product/Compare/Item/Collection.php, line 315
+                        app/code/core/Mage/Catalog/Model/Resource/Product/Compare/Item/Collection.php, line 315
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_product_collection_load_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Model/Resource/Product/Collection.php, line 363
+                        app/code/core/Mage/Catalog/Model/Resource/Product/Collection.php, line 363
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_product_collection_load_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Model/Resource/Product/Collection.php, line 383
+                        app/code/core/Mage/Catalog/Model/Resource/Product/Collection.php, line 383
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_product_collection_before_add_count_to_categories" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Model/Resource/Product/Collection.php, line 831
+                        app/code/core/Mage/Catalog/Model/Resource/Product/Collection.php, line 831
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_product_collection_apply_limitations_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Model/Resource/Product/Collection.php, line 1652
+                        app/code/core/Mage/Catalog/Model/Resource/Product/Collection.php, line 1652
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_category_tree_move_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Model/Category.php, line 229
+                        app/code/core/Mage/Catalog/Model/Category.php, line 229
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="category_move" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Model/Category.php, line 247
+                        app/code/core/Mage/Catalog/Model/Category.php, line 247
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_product_attribute_update_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Model/Product/Action.php, line 66
+                        app/code/core/Mage/Catalog/Model/Product/Action.php, line 66
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_product_website_update_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Model/Product/Action.php, line 99
+                        app/code/core/Mage/Catalog/Model/Product/Action.php, line 99
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_product_website_update" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Model/Product/Action.php, line 123
+                        app/code/core/Mage/Catalog/Model/Product/Action.php, line 123
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_product_get_final_price" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Model/Product/Type/Price.php, line 68
+                        app/code/core/Mage/Catalog/Model/Product/Type/Price.php, line 68
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_product_type_grouped_price" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Model/Product/Type/Grouped/Price.php, line 70
+                        app/code/core/Mage/Catalog/Model/Product/Type/Grouped/Price.php, line 70
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_product_type_configurable_price" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Model/Product/Type/Configurable/Price.php, line 70
+                        app/code/core/Mage/Catalog/Model/Product/Type/Configurable/Price.php, line 70
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_product_status_update" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Model/Product/Status.php, line 217
+                        app/code/core/Mage/Catalog/Model/Product/Status.php, line 217
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_model_product_duplicate" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Model/Product.php, line 1036
+                        app/code/core/Mage/Catalog/Model/Product.php, line 1036
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_product_is_salable_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Model/Product.php, line 1237
+                        app/code/core/Mage/Catalog/Model/Product.php, line 1237
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_product_is_salable_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Catalog/Model/Product.php, line 1247
+                        app/code/core/Mage/Catalog/Model/Product.php, line 1247
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="controller_action_postdispatch_adminhtml" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/GoogleBase/controllers/Adminhtml/Googlebase/TypesController.php, line 46
+                        app/code/core/Mage/GoogleBase/controllers/Adminhtml/Googlebase/TypesController.php, line 46
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="log_visitor_collection_load_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Log/Model/Resource/Visitor/Collection.php, line 240
+                        app/code/core/Mage/Log/Model/Resource/Visitor/Collection.php, line 240
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="log_log_clean_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Log/Model/Resource/Log.php, line 56
+                        app/code/core/Mage/Log/Model/Resource/Log.php, line 56
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="log_log_clean_after" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Log/Model/Resource/Log.php, line 64
+                        app/code/core/Mage/Log/Model/Resource/Log.php, line 64
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="rule_environment_collect" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Rule/Model/Environment.php, line 40
+                        app/code/core/Mage/Rule/Model/Environment.php, line 40
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="adminhtml_block_eav_attribute_edit_form_init" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Eav/Block/Adminhtml/Attribute/Edit/Main/Abstract.php, line 177
+                        app/code/core/Mage/Eav/Block/Adminhtml/Attribute/Edit/Main/Abstract.php, line 177
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="eav_collection_abstract_load_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Eav/Model/Entity/Collection/Abstract.php, line 824
+                        app/code/core/Mage/Eav/Model/Entity/Collection/Abstract.php, line 824
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_product_import_finish_before" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/ImportExport/Model/Import/Entity/Product.php, line 343
+                        app/code/core/Mage/ImportExport/Model/Import/Entity/Product.php, line 343
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_prepare_price_select" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/CatalogSearch/Model/Resource/Advanced.php, line 67
+                        app/code/core/Mage/CatalogSearch/Model/Resource/Advanced.php, line 67
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalogsearch_reset_search_result" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/CatalogSearch/Model/Resource/Fulltext.php, line 297
+                        app/code/core/Mage/CatalogSearch/Model/Resource/Fulltext.php, line 297
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="bundle_product_view_config" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Bundle/Block/Catalog/Product/View/Type/Bundle.php, line 162
+                        app/code/core/Mage/Bundle/Block/Catalog/Product/View/Type/Bundle.php, line 162
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_product_prepare_index_select" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Bundle/Model/Resource/Price/Index.php, line 378
+                        app/code/core/Mage/Bundle/Model/Resource/Price/Index.php, line 378
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_product_prepare_index_select" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Bundle/Model/Resource/Indexer/Price.php, line 255
+                        app/code/core/Mage/Bundle/Model/Resource/Indexer/Price.php, line 255
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="prepare_catalog_product_price_index_table" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Bundle/Model/Resource/Indexer/Price.php, line 481
+                        app/code/core/Mage/Bundle/Model/Resource/Indexer/Price.php, line 481
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="catalog_product_get_final_price" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Bundle/Model/Product/Price.php, line 94
+                        app/code/core/Mage/Bundle/Model/Product/Price.php, line 94
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="prepare_catalog_product_collection_prices" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Bundle/Model/Product/Price.php, line 104
+                        app/code/core/Mage/Bundle/Model/Product/Price.php, line 104
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="prepare_catalog_product_index_select" type="observers" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                                app/code/core/Mage/Tag/Model/Resource/Indexer/Summary.php, line 214
+                        app/code/core/Mage/Tag/Model/Resource/Indexer/Summary.php, line 214
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
@@ -2198,7 +2218,7 @@ elementFormDefault="qualified">
                         <xs:element name="observer_name" type="observer">
                             <xs:annotation>
                                 <xs:documentation>
-                        Observer name. For convenience, we use class_methodname
+                                    Observer name. For convenience, we use class_methodname
                                 </xs:documentation>
                             </xs:annotation>
                         </xs:element>
