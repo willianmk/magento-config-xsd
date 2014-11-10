@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<layout xmlns="http://www.w3schools.com"
+<layout xmlns="http://magento.com/schema/theme/layout"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation="localhost ../xsd/theme_layout_local.xsd">
+xsi:schemaLocation=" ../xsd/theme_layout_local.xsd">
     <default>
         <remove name="right.poll"></remove>
         
