@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<config xmlns="http://www.w3schools.com"
+<config xmlns="http://magento.com/schema/module/config"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation="localhost ../xsd/etc_config.xsd">
+xsi:schemaLocation="../xsd/etc_config.xsd">
     <modules>
         <SchemaName_ModuleName>
             <depends></depends>
